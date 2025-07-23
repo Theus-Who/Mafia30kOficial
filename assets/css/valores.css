@@ -1,0 +1,659 @@
+/* ===================================
+   MÁFIA 30K - ESTILOS MERCADO DE VALORES
+   Marketplace de freelancers
+=================================== */
+
+/* Header do Mercado */
+.market-header {
+    padding: var(--spacing-xl) 0;
+    text-align: center;
+    background: linear-gradient(135deg, rgba(57, 255, 20, 0.1), rgba(139, 92, 246, 0.1));
+}
+
+.header-content {
+    animation: fadeInUp 1s ease;
+}
+
+.market-stats {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--spacing-xl);
+    margin-top: var(--spacing-lg);
+    flex-wrap: wrap;
+}
+
+.stat-item {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    color: var(--color-gray-400);
+    font-size: 0.875rem;
+}
+
+.stat-icon {
+    width: 1.25rem;
+    height: 1.25rem;
+}
+
+.stat-item:nth-child(1) .stat-icon {
+    color: var(--color-yellow);
+}
+
+.stat-item:nth-child(2) .stat-icon {
+    color: var(--color-green);
+}
+
+.stat-item:nth-child(3) .stat-icon {
+    color: var(--color-purple);
+}
+
+/* Seção de Busca */
+.search-section {
+    padding: var(--spacing-lg) 0;
+}
+
+.search-card {
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--color-gray-700);
+    border-radius: var(--border-radius-xl);
+    padding: var(--spacing-lg);
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Barra de Busca */
+.search-bar {
+    position: relative;
+    margin-bottom: var(--spacing-lg);
+}
+
+.search-icon {
+    position: absolute;
+    left: var(--spacing-sm);
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1.25rem;
+    height: 1.25rem;
+    color: var(--color-gray-400);
+}
+
+.search-input {
+    width: 100%;
+    padding: var(--spacing-sm) var(--spacing-sm) var(--spacing-sm) 3rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--color-gray-600);
+    border-radius: var(--border-radius-lg);
+    color: var(--color-white);
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 1rem;
+    transition: var(--transition-normal);
+}
+
+.search-input:focus {
+    outline: none;
+    border-color: var(--color-green);
+    box-shadow: 0 0 0 2px rgba(57, 255, 20, 0.2);
+}
+
+.search-input::placeholder {
+    color: var(--color-gray-400);
+}
+
+/* Filtros de Categoria */
+.category-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-xs);
+    margin-bottom: var(--spacing-sm);
+}
+
+.filter-btn {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    padding: var(--spacing-xs) var(--spacing-sm);
+    border: none;
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--color-gray-400);
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 600;
+    font-size: 0.875rem;
+    border-radius: var(--border-radius-md);
+    cursor: pointer;
+    transition: var(--transition-normal);
+    white-space: nowrap;
+}
+
+.filter-btn:hover {
+    color: var(--color-white);
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.filter-btn.active {
+    background: linear-gradient(135deg, var(--color-green), var(--color-yellow));
+    color: var(--color-black);
+    font-weight: 700;
+}
+
+.filter-count {
+    font-size: 0.75rem;
+    opacity: 0.75;
+}
+
+/* Filtros Avançados */
+.advanced-filters {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--spacing-sm);
+}
+
+.filters-toggle {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    background: none;
+    border: none;
+    color: var(--color-gray-400);
+    font-family: 'Rajdhani', sans-serif;
+    cursor: pointer;
+    transition: var(--transition-normal);
+}
+
+.filters-toggle:hover {
+    color: var(--color-white);
+}
+
+.filter-icon,
+.chevron-icon {
+    width: 1rem;
+    height: 1rem;
+}
+
+.chevron-icon {
+    transition: var(--transition-normal);
+}
+
+.filters-toggle.active .chevron-icon {
+    transform: rotate(180deg);
+}
+
+.results-count {
+    font-size: 0.875rem;
+    color: var(--color-gray-400);
+}
+
+/* Filtros Expandidos */
+.expanded-filters {
+    display: none;
+    padding-top: var(--spacing-sm);
+    border-top: 1px solid var(--color-gray-700);
+    animation: fadeIn 0.3s ease;
+}
+
+.expanded-filters.active {
+    display: block;
+}
+
+.filters-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--spacing-sm);
+}
+
+.filter-group {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xs);
+}
+
+.filter-label {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--color-gray-400);
+}
+
+.filter-select {
+    padding: var(--spacing-xs) var(--spacing-sm);
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--color-gray-600);
+    border-radius: var(--border-radius-md);
+    color: var(--color-white);
+    font-family: 'Rajdhani', sans-serif;
+    cursor: pointer;
+    transition: var(--transition-normal);
+}
+
+.filter-select:focus {
+    outline: none;
+    border-color: var(--color-green);
+}
+
+.filter-select option {
+    background: var(--color-gray-900);
+    color: var(--color-white);
+}
+
+/* Lista de Freelancers */
+.freelancers-section {
+    padding: var(--spacing-lg) 0 var(--spacing-2xl);
+}
+
+.freelancers-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: var(--spacing-lg);
+}
+
+.freelancer-card {
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--color-gray-700);
+    border-radius: var(--border-radius-xl);
+    overflow: hidden;
+    transition: var(--transition-normal);
+    animation: fadeInUp 0.5s ease;
+}
+
+.freelancer-card:hover {
+    border-color: rgba(57, 255, 20, 0.5);
+    transform: translateY(-4px) scale(1.01);
+    box-shadow: var(--shadow-card), var(--shadow-neon-green);
+}
+
+.freelancer-header {
+    padding: var(--spacing-lg);
+    padding-bottom: var(--spacing-sm);
+}
+
+.freelancer-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: var(--spacing-sm);
+}
+
+.freelancer-profile {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+}
+
+.freelancer-avatar-container {
+    position: relative;
+}
+
+.freelancer-avatar {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--color-green), var(--color-cyan));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.25rem;
+    color: var(--color-white);
+}
+
+.online-indicator {
+    position: absolute;
+    bottom: -2px;
+    right: -2px;
+    width: 1.25rem;
+    height: 1.25rem;
+    background: var(--color-green);
+    border: 3px solid var(--color-black);
+    border-radius: 50%;
+}
+
+.freelancer-details h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--color-white);
+    margin-bottom: 2px;
+    transition: var(--transition-normal);
+}
+
+.freelancer-card:hover .freelancer-details h3 {
+    color: var(--color-green);
+}
+
+.freelancer-specialty {
+    color: var(--color-gray-400);
+    font-size: 0.875rem;
+    margin-bottom: var(--spacing-xs);
+}
+
+.freelancer-badges {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+}
+
+.level-badge {
+    padding: 2px var(--spacing-xs);
+    border-radius: var(--border-radius-full);
+    font-size: 0.75rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, var(--color-green), var(--color-cyan));
+    color: var(--color-white);
+}
+
+.freelancer-emojis {
+    display: flex;
+    gap: 2px;
+}
+
+.freelancer-emojis span {
+    font-size: 0.875rem;
+}
+
+.freelancer-value {
+    text-align: right;
+}
+
+.value-amount {
+    font-size: 2rem;
+    font-weight: 900;
+    color: var(--color-green);
+    line-height: 1;
+}
+
+.value-unit {
+    color: var(--color-gray-500);
+    font-size: 0.875rem;
+}
+
+.freelancer-description {
+    color: var(--color-gray-400);
+    line-height: 1.5;
+    margin-bottom: var(--spacing-sm);
+}
+
+/* Stats do Freelancer */
+.freelancer-stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--spacing-xs);
+    margin-bottom: var(--spacing-sm);
+}
+
+.freelancer-stat {
+    text-align: center;
+    padding: var(--spacing-xs);
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: var(--border-radius-sm);
+}
+
+.stat-value {
+    font-weight: 700;
+    font-size: 0.875rem;
+    margin-bottom: 2px;
+}
+
+.stat-label {
+    font-size: 0.75rem;
+    color: var(--color-gray-500);
+}
+
+.freelancer-stat:nth-child(1) .stat-value {
+    color: var(--color-yellow);
+}
+
+.freelancer-stat:nth-child(2) .stat-value {
+    color: var(--color-green);
+}
+
+.freelancer-stat:nth-child(3) .stat-value {
+    color: var(--color-cyan);
+}
+
+.freelancer-stat:nth-child(4) .stat-value {
+    color: var(--color-purple);
+}
+
+/* Portfólio */
+.freelancer-portfolio {
+    margin-bottom: var(--spacing-lg);
+}
+
+.portfolio-title {
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: var(--color-gray-400);
+    margin-bottom: var(--spacing-xs);
+}
+
+.portfolio-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.portfolio-item {
+    display: flex;
+    align-items: center;
+    font-size: 0.875rem;
+    color: var(--color-gray-300);
+}
+
+.portfolio-bullet {
+    color: var(--color-green);
+    margin-right: var(--spacing-xs);
+}
+
+/* Ações do Freelancer */
+.freelancer-actions {
+    padding: var(--spacing-sm) var(--spacing-lg);
+    background: rgba(0, 0, 0, 0.3);
+    border-top: 1px solid var(--color-gray-800);
+}
+
+.actions-buttons {
+    display: flex;
+    gap: var(--spacing-sm);
+}
+
+.btn-hire {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-xs);
+    padding: var(--spacing-sm) var(--spacing-lg);
+    background: linear-gradient(135deg, var(--color-green), var(--color-yellow));
+    color: var(--color-black);
+    border: none;
+    border-radius: var(--border-radius-lg);
+    font-family: 'Orbitron', monospace;
+    font-weight: 700;
+    font-size: 0.875rem;
+    cursor: pointer;
+    transition: var(--transition-normal);
+}
+
+.btn-hire:hover {
+    background: linear-gradient(135deg, var(--color-yellow), var(--color-green));
+    transform: scale(1.02);
+}
+
+.btn-favorite {
+    padding: var(--spacing-sm);
+    background: rgba(255, 255, 255, 0.05);
+    border: none;
+    border-radius: var(--border-radius-lg);
+    color: var(--color-gray-400);
+    cursor: pointer;
+    transition: var(--transition-normal);
+}
+
+.btn-favorite:hover {
+    color: var(--color-white);
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* Estado Vazio */
+.empty-state {
+    text-align: center;
+    padding: var(--spacing-2xl);
+    color: var(--color-gray-400);
+}
+
+.empty-icon {
+    font-size: 4rem;
+    margin-bottom: var(--spacing-sm);
+}
+
+.empty-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-gray-400);
+    margin-bottom: var(--spacing-xs);
+}
+
+.empty-description {
+    color: var(--color-gray-500);
+}
+
+/* CTA Freelancer */
+.cta-section {
+    padding: var(--spacing-2xl) 0;
+    background: linear-gradient(135deg, rgba(139, 92, 246, 0.1), rgba(255, 0, 128, 0.1));
+}
+
+.cta-content {
+    text-align: center;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--color-gray-700);
+    border-radius: var(--border-radius-xl);
+    padding: var(--spacing-2xl);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.cta-title {
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+    font-weight: 900;
+    margin-bottom: var(--spacing-sm);
+    background: linear-gradient(135deg, var(--color-purple), var(--color-pink));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.cta-description {
+    color: var(--color-gray-400);
+    font-size: 1.125rem;
+    margin-bottom: var(--spacing-xl);
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .freelancers-grid {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: var(--spacing-md);
+    }
+    
+    .market-stats {
+        gap: var(--spacing-md);
+    }
+    
+    .search-card {
+        padding: var(--spacing-md);
+    }
+    
+    .category-filters {
+        gap: var(--spacing-xs);
+    }
+    
+    .filter-btn {
+        padding: var(--spacing-xs);
+        font-size: 0.8rem;
+    }
+    
+    .filters-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .freelancer-header {
+        padding: var(--spacing-md);
+    }
+    
+    .freelancer-info {
+        flex-direction: column;
+        gap: var(--spacing-sm);
+    }
+    
+    .freelancer-value {
+        text-align: left;
+    }
+    
+    .freelancer-stats {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--spacing-xs);
+    }
+    
+    .cta-content {
+        padding: var(--spacing-xl);
+    }
+}
+
+@media (max-width: 480px) {
+    .freelancers-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .market-stats {
+        flex-direction: column;
+        gap: var(--spacing-sm);
+    }
+    
+    .advanced-filters {
+        flex-direction: column;
+        gap: var(--spacing-xs);
+        align-items: flex-start;
+    }
+    
+    .freelancer-profile {
+        gap: var(--spacing-xs);
+    }
+    
+    .freelancer-avatar {
+        width: 3rem;
+        height: 3rem;
+        font-size: 1rem;
+    }
+    
+    .freelancer-details h3 {
+        font-size: 1.125rem;
+    }
+    
+    .value-amount {
+        font-size: 1.5rem;
+    }
+    
+    .actions-buttons {
+        flex-direction: column;
+    }
+}
+
+/* Estados de carregamento */
+.freelancers-grid.loading {
+    opacity: 0.6;
+}
+
+.freelancers-grid.loading::after {
+    content: 'Carregando talentos...';
+    display: block;
+    text-align: center;
+    color: var(--color-gray-500);
+    padding: var(--spacing-xl);
+    grid-column: 1 / -1;
+}

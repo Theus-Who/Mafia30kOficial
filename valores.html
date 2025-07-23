@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mercado de Valores - Máfia 30k</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/valores.css">
+    <!-- Fontes do Google -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Ícones Lucide -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+</head>
+<body>
+    <!-- Navegação -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <!-- Logo -->
+            <a href="index.html" class="nav-logo">
+                <i data-lucide="zap" class="nav-logo-icon"></i>
+                <span class="nav-logo-text">
+                    <span class="logo-mafia">MÁFIA</span>
+                    <span class="logo-30k"> 30K</span>
+                </span>
+            </a>
+
+            <!-- Menu Desktop -->
+            <div class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-link">
+                    <span class="nav-icon">🏠</span>
+                    Quartel
+                </a>
+                <a href="rede.html" class="nav-link">
+                    <span class="nav-icon">👥</span>
+                    Rede 30k
+                </a>
+                <a href="drinks.html" class="nav-link">
+                    <span class="nav-icon">🍹</span>
+                    Drinks
+                </a>
+                <a href="fusion.html" class="nav-link">
+                    <span class="nav-icon">🍛</span>
+                    Fusion
+                </a>
+                <a href="valores.html" class="nav-link active">
+                    <span class="nav-icon">💰</span>
+                    Mercado
+                </a>
+                <a href="perfil.html" class="nav-link">
+                    <span class="nav-icon">🛡️</span>
+                    Perfil
+                </a>
+            </div>
+
+            <!-- Botão Mobile -->
+            <button class="nav-toggle" id="nav-toggle">
+                <i data-lucide="menu" class="nav-toggle-icon"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Background Cyber -->
+    <div class="cyber-background">
+        <div class="cyber-grid"></div>
+        <div class="cyber-glow"></div>
+    </div>
+
+    <!-- Conteúdo Principal -->
+    <main class="main-content">
+        <!-- Header do Mercado -->
+        <section class="market-header">
+            <div class="container">
+                <div class="header-content">
+                    <h1 class="page-title">MERCADO DE VALORES</h1>
+                    <p class="page-subtitle">
+                        Onde freelancers <span class="text-highlight-green">definem seu próprio valor</span> e 
+                        clientes encontram <span class="text-highlight-purple">talento underground autêntico</span>. 
+                        Sem intermediários, sem comissões, só valor puro.
+                    </p>
+                    
+                    <!-- Stats do Mercado -->
+                    <div class="market-stats">
+                        <div class="stat-item">
+                            <i data-lucide="award" class="stat-icon"></i>
+                            <span>47 Talentos Ativos</span>
+                        </div>
+                        <div class="stat-item">
+                            <i data-lucide="zap" class="stat-icon"></i>
+                            <span>Resposta Média: 2.5h</span>
+                        </div>
+                        <div class="stat-item">
+                            <i data-lucide="star" class="stat-icon"></i>
+                            <span>4.8★ Avaliação Média</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Busca e Filtros -->
+        <section class="search-section">
+            <div class="container">
+                <div class="search-card">
+                    <!-- Barra de Busca -->
+                    <div class="search-bar">
+                        <i data-lucide="search" class="search-icon"></i>
+                        <input 
+                            type="text" 
+                            class="search-input" 
+                            placeholder="Buscar por nome, especialidade ou habilidade..."
+                            id="search-input"
+                        >
+                    </div>
+
+                    <!-- Filtros de Categoria -->
+                    <div class="category-filters" id="category-filters">
+                        <button class="filter-btn active" data-category="todos">
+                            Todos <span class="filter-count">(47)</span>
+                        </button>
+                        <button class="filter-btn" data-category="design">
+                            Design 🎨 <span class="filter-count">(12)</span>
+                        </button>
+                        <button class="filter-btn" data-category="dev">
+                            Dev 💻 <span class="filter-count">(15)</span>
+                        </button>
+                        <button class="filter-btn" data-category="video">
+                            Vídeo 🎬 <span class="filter-count">(8)</span>
+                        </button>
+                        <button class="filter-btn" data-category="copy">
+                            Copy ✍️ <span class="filter-count">(7)</span>
+                        </button>
+                        <button class="filter-btn" data-category="marketing">
+                            Marketing 📱 <span class="filter-count">(5)</span>
+                        </button>
+                    </div>
+
+                    <!-- Filtros Avançados -->
+                    <div class="advanced-filters">
+                        <button class="filters-toggle" id="filters-toggle">
+                            <i data-lucide="filter" class="filter-icon"></i>
+                            <span>Filtros Avançados</span>
+                            <i data-lucide="chevron-down" class="chevron-icon"></i>
+                        </button>
+                        
+                        <div class="results-count">
+                            <span id="results-count">47 talentos encontrados</span>
+                        </div>
+                    </div>
+
+                    <!-- Filtros Expandidos -->
+                    <div class="expanded-filters" id="expanded-filters">
+                        <div class="filters-grid">
+                            <div class="filter-group">
+                                <label class="filter-label">Valor por Hora</label>
+                                <select class="filter-select" id="value-filter">
+                                    <option value="todos">Todos os valores</option>
+                                    <option value="0-50">R$ 0 - R$ 50/h</option>
+                                    <option value="50-100">R$ 50 - R$ 100/h</option>
+                                    <option value="100-200">R$ 100 - R$ 200/h</option>
+                                    <option value="200+">R$ 200+/h</option>
+                                </select>
+                            </div>
+                            <div class="filter-group">
+                                <label class="filter-label">Ordenar por</label>
+                                <select class="filter-select" id="sort-filter">
+                                    <option value="relevance">Mais Relevantes</option>
+                                    <option value="rating">Melhor Avaliação</option>
+                                    <option value="price-low">Menor Valor</option>
+                                    <option value="price-high">Maior Valor</option>
+                                    <option value="response">Mais Rápidos</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Lista de Freelancers -->
+        <section class="freelancers-section">
+            <div class="container">
+                <div class="freelancers-grid" id="freelancers-grid">
+                    <!-- Freelancers serão carregados via JavaScript -->
+                </div>
+                
+                <!-- Estado Vazio -->
+                <div class="empty-state" id="empty-state" style="display: none;">
+                    <div class="empty-icon">🔍</div>
+                    <h3 class="empty-title">Nenhum talento encontrado</h3>
+                    <p class="empty-description">Tente ajustar seus filtros de busca</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Freelancer -->
+        <section class="cta-section">
+            <div class="container">
+                <div class="cta-content">
+                    <h3 class="cta-title">SEJA UM FREELANCER 30K</h3>
+                    <p class="cta-description">
+                        Defina seu valor, mostre seu talento e construa sua reputação no mercado underground mais autêntico do Brasil.
+                    </p>
+                    <button class="btn btn-cta">
+                        <i data-lucide="zap" class="btn-icon"></i>
+                        CADASTRAR MEU TALENTO
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Scripts -->
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/valores.js"></script>
+</body>
+</html>

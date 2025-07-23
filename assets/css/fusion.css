@@ -1,0 +1,604 @@
+/* ===================================
+   MÁFIA 30K - ESTILOS FUSION
+   Marmitaria virtual com pratos autorais
+=================================== */
+
+/* Header da Marmitaria */
+.fusion-header {
+    padding: var(--spacing-xl) 0;
+    text-align: center;
+    background: linear-gradient(135deg, rgba(255, 170, 0, 0.1), rgba(255, 107, 53, 0.1));
+}
+
+.header-content {
+    animation: fadeInUp 1s ease;
+}
+
+.fusion-stats {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--spacing-xl);
+    margin-top: var(--spacing-lg);
+    flex-wrap: wrap;
+}
+
+.stat-item {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    color: var(--color-gray-400);
+    font-size: 0.875rem;
+}
+
+.stat-icon {
+    width: 1.25rem;
+    height: 1.25rem;
+}
+
+.stat-item:nth-child(1) .stat-icon {
+    color: var(--color-green);
+}
+
+.stat-item:nth-child(2) .stat-icon {
+    color: #ff6b6b;
+}
+
+.stat-item:nth-child(3) .stat-icon {
+    color: #ff6b35;
+}
+
+/* Seção de Assinatura */
+.subscription-section {
+    padding: var(--spacing-lg) 0;
+}
+
+.subscription-card {
+    background: linear-gradient(135deg, rgba(139, 92, 246, 0.1), rgba(255, 0, 128, 0.1));
+    border: 1px solid var(--color-gray-700);
+    border-radius: var(--border-radius-xl);
+    padding: var(--spacing-xl);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.subscription-header {
+    text-align: center;
+    margin-bottom: var(--spacing-lg);
+}
+
+.subscription-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, var(--color-purple), var(--color-pink));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: var(--spacing-xs);
+}
+
+.subscription-subtitle {
+    color: var(--color-gray-400);
+}
+
+.subscription-plans {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-lg);
+}
+
+.plan-card {
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(5px);
+    border: 1px solid var(--color-gray-700);
+    border-radius: var(--border-radius-lg);
+    padding: var(--spacing-lg);
+    text-align: center;
+    position: relative;
+    transition: var(--transition-normal);
+}
+
+.plan-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--color-yellow);
+}
+
+.plan-popular {
+    border-color: var(--color-pink);
+    background: rgba(255, 0, 128, 0.1);
+}
+
+.plan-badge {
+    position: absolute;
+    top: -8px;
+    right: var(--spacing-sm);
+    background: var(--color-pink);
+    color: var(--color-white);
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: var(--spacing-xs) var(--spacing-sm);
+    border-radius: var(--border-radius-full);
+}
+
+.plan-title {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: var(--color-yellow);
+    margin-bottom: var(--spacing-xs);
+}
+
+.plan-popular .plan-title {
+    color: var(--color-pink);
+}
+
+.plan-price {
+    font-size: 2rem;
+    font-weight: 900;
+    color: var(--color-white);
+    margin-bottom: var(--spacing-xs);
+}
+
+.plan-details {
+    color: var(--color-gray-400);
+    font-size: 0.875rem;
+    margin-bottom: var(--spacing-sm);
+}
+
+.btn-plan {
+    width: 100%;
+    padding: var(--spacing-xs) var(--spacing-lg);
+    background: var(--color-yellow);
+    color: var(--color-black);
+    border: none;
+    border-radius: var(--border-radius-md);
+    font-family: 'Orbitron', monospace;
+    font-weight: 700;
+    cursor: pointer;
+    transition: var(--transition-normal);
+}
+
+.btn-plan:hover {
+    background: #e6a000;
+    transform: scale(1.05);
+}
+
+.btn-plan-popular {
+    width: 100%;
+    padding: var(--spacing-xs) var(--spacing-lg);
+    background: linear-gradient(135deg, var(--color-pink), var(--color-purple));
+    color: var(--color-white);
+    border: none;
+    border-radius: var(--border-radius-md);
+    font-family: 'Orbitron', monospace;
+    font-weight: 700;
+    cursor: pointer;
+    transition: var(--transition-normal);
+}
+
+.btn-plan-popular:hover {
+    background: linear-gradient(135deg, var(--color-purple), var(--color-pink));
+    transform: scale(1.05);
+}
+
+/* Categorias */
+.categories-section {
+    padding: var(--spacing-lg) 0;
+}
+
+.categories-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: var(--spacing-xs);
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--color-gray-700);
+    border-radius: var(--border-radius-xl);
+    padding: var(--spacing-xs);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.category-btn {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    padding: var(--spacing-sm) var(--spacing-lg);
+    border: none;
+    background: none;
+    color: var(--color-gray-400);
+    font-family: 'Orbitron', monospace;
+    font-weight: 700;
+    font-size: 0.9rem;
+    border-radius: var(--border-radius-lg);
+    cursor: pointer;
+    transition: var(--transition-normal);
+    white-space: nowrap;
+}
+
+.category-btn:hover {
+    color: var(--color-white);
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.category-btn.active {
+    background: linear-gradient(135deg, #ff6b35, #ff4757);
+    color: var(--color-white);
+    box-shadow: 0 0 20px rgba(255, 107, 53, 0.4);
+}
+
+.category-count {
+    font-size: 0.75rem;
+    opacity: 0.75;
+}
+
+/* Cardápio de Pratos */
+.dishes-menu {
+    padding: var(--spacing-lg) 0 var(--spacing-2xl);
+}
+
+.dishes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: var(--spacing-lg);
+}
+
+.dish-card {
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--color-gray-700);
+    border-radius: var(--border-radius-xl);
+    overflow: hidden;
+    transition: var(--transition-normal);
+    position: relative;
+    animation: fadeInUp 0.5s ease;
+}
+
+.dish-card:hover {
+    border-color: rgba(255, 107, 53, 0.5);
+    transform: translateY(-4px) scale(1.02);
+    box-shadow: var(--shadow-card), 0 0 30px rgba(255, 107, 53, 0.3);
+}
+
+.dish-badges {
+    position: absolute;
+    top: var(--spacing-sm);
+    left: var(--spacing-sm);
+    z-index: 10;
+    display: flex;
+    gap: var(--spacing-xs);
+}
+
+.dish-badge {
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(5px);
+    border-radius: var(--border-radius-full);
+    padding: var(--spacing-xs) var(--spacing-sm);
+    font-size: 0.875rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+}
+
+.signature-badge {
+    background: linear-gradient(135deg, var(--color-purple), var(--color-pink));
+    color: var(--color-white);
+    font-size: 0.75rem;
+}
+
+.dish-emoji {
+    font-size: 1rem;
+}
+
+.dish-rating {
+    color: var(--color-yellow);
+}
+
+.dish-image-container {
+    position: relative;
+    height: 12rem;
+    overflow: hidden;
+}
+
+.dish-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition-slow);
+}
+
+.dish-card:hover .dish-image {
+    transform: scale(1.1);
+}
+
+.dish-image-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+}
+
+.dish-content {
+    padding: var(--spacing-lg);
+}
+
+.dish-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: var(--spacing-sm);
+}
+
+.dish-name {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--color-white);
+    transition: var(--transition-normal);
+}
+
+.dish-card:hover .dish-name {
+    color: #ff6b35;
+}
+
+.dish-price {
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: #ff6b35;
+}
+
+.dish-description {
+    color: var(--color-gray-400);
+    font-size: 0.875rem;
+    line-height: 1.5;
+    margin-bottom: var(--spacing-sm);
+}
+
+/* Stats do Prato */
+.dish-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-xs);
+    margin-bottom: var(--spacing-sm);
+}
+
+.dish-stat {
+    text-align: center;
+    padding: var(--spacing-xs);
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: var(--border-radius-sm);
+}
+
+.stat-value {
+    font-weight: 700;
+    font-size: 0.875rem;
+    margin-bottom: 2px;
+}
+
+.stat-label {
+    font-size: 0.75rem;
+    color: var(--color-gray-500);
+}
+
+.dish-stat:nth-child(1) .stat-value {
+    color: var(--color-green);
+}
+
+.dish-stat:nth-child(2) .stat-value {
+    color: #ff6b35;
+    font-size: 1rem;
+}
+
+.dish-stat:nth-child(3) .stat-value {
+    color: var(--color-yellow);
+}
+
+/* Ingredientes */
+.dish-ingredients {
+    margin-bottom: var(--spacing-lg);
+}
+
+.ingredients-title {
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: var(--color-gray-400);
+    margin-bottom: var(--spacing-xs);
+}
+
+.ingredients-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-xs);
+}
+
+.ingredient-tag {
+    padding: 2px var(--spacing-xs);
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: var(--border-radius-full);
+    font-size: 0.75rem;
+    color: var(--color-gray-300);
+}
+
+/* Botão de Pedido */
+.dish-order-btn {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-xs);
+    padding: var(--spacing-sm) var(--spacing-lg);
+    background: linear-gradient(135deg, #ff6b35, #ff4757);
+    color: var(--color-white);
+    border: none;
+    border-radius: var(--border-radius-lg);
+    font-family: 'Orbitron', monospace;
+    font-weight: 700;
+    font-size: 0.875rem;
+    cursor: pointer;
+    transition: var(--transition-normal);
+    position: relative;
+    overflow: hidden;
+}
+
+.dish-order-btn:hover {
+    background: linear-gradient(135deg, #ff4757, #ff6b35);
+    transform: scale(1.02);
+    box-shadow: 0 0 20px rgba(255, 107, 53, 0.5);
+}
+
+.dish-order-btn .btn-arrow {
+    transition: var(--transition-normal);
+}
+
+.dish-order-btn:hover .btn-arrow {
+    transform: translateX(4px);
+}
+
+/* Nível de Tempero */
+.spice-level {
+    display: inline-flex;
+    align-items: center;
+    font-size: 0.875rem;
+}
+
+/* CTA Chef 30K */
+.cta-section {
+    padding: var(--spacing-2xl) 0;
+    background: linear-gradient(135deg, rgba(255, 107, 53, 0.1), rgba(255, 71, 87, 0.1));
+}
+
+.cta-content {
+    text-align: center;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--color-gray-700);
+    border-radius: var(--border-radius-xl);
+    padding: var(--spacing-2xl);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.cta-title {
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+    font-weight: 900;
+    margin-bottom: var(--spacing-sm);
+    background: linear-gradient(135deg, #ff6b35, #ff4757);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.cta-description {
+    color: var(--color-gray-400);
+    font-size: 1.125rem;
+    margin-bottom: var(--spacing-xl);
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .dishes-grid {
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: var(--spacing-md);
+    }
+    
+    .fusion-stats {
+        gap: var(--spacing-md);
+    }
+    
+    .subscription-plans {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-md);
+    }
+    
+    .categories-container {
+        padding: var(--spacing-sm);
+    }
+    
+    .category-btn {
+        padding: var(--spacing-xs) var(--spacing-sm);
+        font-size: 0.8rem;
+    }
+    
+    .dish-content {
+        padding: var(--spacing-md);
+    }
+    
+    .dish-header {
+        flex-direction: column;
+        gap: var(--spacing-xs);
+    }
+    
+    .dish-stats {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2px;
+    }
+    
+    .cta-content {
+        padding: var(--spacing-xl);
+    }
+}
+
+@media (max-width: 480px) {
+    .dishes-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .fusion-stats {
+        flex-direction: column;
+        gap: var(--spacing-sm);
+    }
+    
+    .subscription-card {
+        padding: var(--spacing-lg);
+    }
+    
+    .dish-image-container {
+        height: 10rem;
+    }
+    
+    .dish-name {
+        font-size: 1.125rem;
+    }
+    
+    .dish-price {
+        font-size: 1.25rem;
+    }
+    
+    .ingredients-list {
+        gap: 2px;
+    }
+    
+    .ingredient-tag {
+        font-size: 0.7rem;
+    }
+}
+
+/* Animações específicas */
+@keyframes dishGlow {
+    0%, 100% {
+        box-shadow: 0 0 20px rgba(255, 107, 53, 0.3);
+    }
+    50% {
+        box-shadow: 0 0 40px rgba(255, 107, 53, 0.6);
+    }
+}
+
+.dish-card:hover {
+    animation: dishGlow 2s ease-in-out infinite;
+}
+
+/* Estados de carregamento */
+.dishes-grid.loading {
+    opacity: 0.6;
+}
+
+.dishes-grid.loading::after {
+    content: 'Preparando pratos...';
+    display: block;
+    text-align: center;
+    color: var(--color-gray-500);
+    padding: var(--spacing-xl);
+    grid-column: 1 / -1;
+}

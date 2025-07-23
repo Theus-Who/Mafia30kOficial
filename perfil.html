@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil 30k - Máfia 30k</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/perfil.css">
+    <!-- Fontes do Google -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Ícones Lucide -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+</head>
+<body>
+    <!-- Navegação -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <!-- Logo -->
+            <a href="index.html" class="nav-logo">
+                <i data-lucide="zap" class="nav-logo-icon"></i>
+                <span class="nav-logo-text">
+                    <span class="logo-mafia">MÁFIA</span>
+                    <span class="logo-30k"> 30K</span>
+                </span>
+            </a>
+
+            <!-- Menu Desktop -->
+            <div class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-link">
+                    <span class="nav-icon">🏠</span>
+                    Quartel
+                </a>
+                <a href="rede.html" class="nav-link">
+                    <span class="nav-icon">👥</span>
+                    Rede 30k
+                </a>
+                <a href="drinks.html" class="nav-link">
+                    <span class="nav-icon">🍹</span>
+                    Drinks
+                </a>
+                <a href="fusion.html" class="nav-link">
+                    <span class="nav-icon">🍛</span>
+                    Fusion
+                </a>
+                <a href="valores.html" class="nav-link">
+                    <span class="nav-icon">💰</span>
+                    Mercado
+                </a>
+                <a href="perfil.html" class="nav-link active">
+                    <span class="nav-icon">🛡️</span>
+                    Perfil
+                </a>
+            </div>
+
+            <!-- Botão Mobile -->
+            <button class="nav-toggle" id="nav-toggle">
+                <i data-lucide="menu" class="nav-toggle-icon"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Background Cyber -->
+    <div class="cyber-background">
+        <div class="cyber-grid"></div>
+        <div class="cyber-glow"></div>
+    </div>
+
+    <!-- Conteúdo Principal -->
+    <main class="main-content">
+        <!-- Header do Perfil -->
+        <section class="profile-header">
+            <div class="container">
+                <div class="profile-card">
+                    <div class="profile-info">
+                        <!-- Avatar -->
+                        <div class="avatar-section">
+                            <div class="avatar-container">
+                                <div class="avatar">CR</div>
+                                <button class="avatar-edit">
+                                    <i data-lucide="camera" class="camera-icon"></i>
+                                </button>
+                                <div class="online-status"></div>
+                            </div>
+                        </div>
+
+                        <!-- Informações do Usuário -->
+                        <div class="user-info">
+                            <div class="user-header">
+                                <h1 class="user-name">CyberRebel_30k</h1>
+                                <button class="edit-btn">
+                                    <i data-lucide="edit" class="edit-icon"></i>
+                                </button>
+                            </div>
+                            
+                            <div class="user-badges">
+                                <span class="level-badge">Respeitado</span>
+                                <span class="rank-info">Rank #23</span>
+                                <span class="join-date">Desde Jan 2024</span>
+                            </div>
+
+                            <div class="user-value">
+                                R$ 850<span class="value-unit">/hora</span>
+                            </div>
+
+                            <!-- Progresso XP -->
+                            <div class="xp-section">
+                                <div class="xp-info">
+                                    <span class="xp-label">XP até próximo nível</span>
+                                    <span class="xp-numbers">4250/5000</span>
+                                </div>
+                                <div class="xp-bar">
+                                    <div class="xp-progress" style="width: 85%"></div>
+                                </div>
+                            </div>
+
+                            <!-- Ações Rápidas -->
+                            <div class="quick-actions">
+                                <button class="btn btn-primary">
+                                    <i data-lucide="trending-up" class="btn-icon"></i>
+                                    AUMENTAR VALOR
+                                </button>
+                                <button class="btn btn-secondary">
+                                    <i data-lucide="shield" class="btn-icon"></i>
+                                    EDITAR PERFIL
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Stats Grid -->
+                        <div class="stats-grid">
+                            <div class="stat-card">
+                                <div class="stat-value">R$ 15.6k</div>
+                                <div class="stat-label">Faturamento</div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-value">28</div>
+                                <div class="stat-label">Projetos</div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-value">4.7★</div>
+                                <div class="stat-label">Avaliação</div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-value">342</div>
+                                <div class="stat-label">Seguidores</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tabs de Navegação -->
+        <section class="tabs-section">
+            <div class="container">
+                <div class="tabs-container">
+                    <button class="tab-btn active" data-tab="overview">
+                        <i data-lucide="trending-up" class="tab-icon"></i>
+                        Overview 📊
+                    </button>
+                    <button class="tab-btn" data-tab="badges">
+                        <i data-lucide="award" class="tab-icon"></i>
+                        Badges 🏆
+                    </button>
+                    <button class="tab-btn" data-tab="missions">
+                        <i data-lucide="target" class="tab-icon"></i>
+                        Missões ⚡
+                    </button>
+                    <button class="tab-btn" data-tab="activity">
+                        <i data-lucide="users" class="tab-icon"></i>
+                        Atividade 📱
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Conteúdo das Tabs -->
+        <section class="content-section">
+            <div class="container">
+                <div class="content-grid">
+                    <!-- Conteúdo Principal -->
+                    <div class="main-content-area">
+                        <!-- Tab Overview -->
+                        <div class="tab-content active" id="overview-content">
+                            <!-- Performance Chart -->
+                            <div class="content-card">
+                                <h3 class="card-title">Performance Mensal</h3>
+                                <div class="chart-placeholder">
+                                    <i data-lucide="trending-up" class="chart-icon"></i>
+                                    <p class="chart-text">Gráfico de performance em desenvolvimento</p>
+                                    <p class="chart-subtext">Crescimento de 45% este mês! 📈</p>
+                                </div>
+                            </div>
+
+                            <!-- Skills & Services -->
+                            <div class="content-card">
+                                <h3 class="card-title">Habilidades & Serviços</h3>
+                                <div class="skills-grid">
+                                    <div class="skills-section">
+                                        <h4 class="skills-title">Especialidades</h4>
+                                        <div class="skills-list" id="skills-list">
+                                            <!-- Skills serão carregadas via JavaScript -->
+                                        </div>
+                                    </div>
+                                    <div class="tools-section">
+                                        <h4 class="tools-title">Ferramentas</h4>
+                                        <div class="tools-list" id="tools-list">
+                                            <!-- Tools serão carregadas via JavaScript -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Tab Badges -->
+                        <div class="tab-content" id="badges-content">
+                            <div class="badges-grid" id="badges-grid">
+                                <!-- Badges serão carregados via JavaScript -->
+                            </div>
+                        </div>
+
+                        <!-- Tab Missões -->
+                        <div class="tab-content" id="missions-content">
+                            <div class="missions-list" id="missions-list">
+                                <!-- Missões serão carregadas via JavaScript -->
+                            </div>
+                        </div>
+
+                        <!-- Tab Atividade -->
+                        <div class="tab-content" id="activity-content">
+                            <div class="activity-list" id="activity-list">
+                                <!-- Atividades serão carregadas via JavaScript -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Sidebar -->
+                    <div class="sidebar">
+                        <!-- Ações Rápidas -->
+                        <div class="sidebar-card">
+                            <h4 class="sidebar-title">Ações Rápidas</h4>
+                            <div class="sidebar-actions">
+                                <button class="sidebar-btn btn-primary">
+                                    <i data-lucide="dollar-sign" class="sidebar-btn-icon"></i>
+                                    Atualizar Valor/Hora
+                                </button>
+                                <button class="sidebar-btn btn-secondary">
+                                    <i data-lucide="zap" class="sidebar-btn-icon"></i>
+                                    Buscar Projetos
+                                </button>
+                                <button class="sidebar-btn btn-secondary">
+                                    <i data-lucide="users" class="sidebar-btn-icon"></i>
+                                    Conectar Talentos
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Próximo Nível -->
+                        <div class="sidebar-card">
+                            <h4 class="sidebar-title">Próximo Nível</h4>
+                            <div class="next-level">
+                                <div class="level-icon">⚡</div>
+                                <div class="level-name">Elite</div>
+                                <div class="level-requirement">750 XP restantes</div>
+                                <div class="level-benefits">
+                                    <div class="benefit-item">• Valor mínimo: R$ 1.000/h</div>
+                                    <div class="benefit-item">• Badge exclusivo Elite</div>
+                                    <div class="benefit-item">• Prioridade no feed</div>
+                                    <div class="benefit-item">• Acesso a projetos premium</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Ranking Semanal -->
+                        <div class="sidebar-card">
+                            <h4 class="sidebar-title">Ranking Semanal</h4>
+                            <div class="ranking-list">
+                                <div class="ranking-item">
+                                    <span class="ranking-position">#1 CyberBoss_Legend</span>
+                                    <span class="ranking-xp">12,450 XP</span>
+                                </div>
+                                <div class="ranking-item">
+                                    <span class="ranking-position">#2 NeonQueen_30k</span>
+                                    <span class="ranking-xp">11,200 XP</span>
+                                </div>
+                                <div class="ranking-item ranking-current">
+                                    <span class="ranking-position">#23 Você</span>
+                                    <span class="ranking-xp">4,250 XP</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Scripts -->
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/perfil.js"></script>
+</body>
+</html>
