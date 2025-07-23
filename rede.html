@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rede Social 30k - Máfia 30k</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/rede.css" />
+    <!-- Fontes do Google -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Ícones Lucide -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+  </head>
+  <body>
+    <!-- Navegação -->
+    <nav class="navbar" id="navbar">
+      <div class="nav-container">
+        <!-- Logo -->
+        <a href="index.html" class="nav-logo">
+          <i data-lucide="zap" class="nav-logo-icon"></i>
+          <span class="nav-logo-text">
+            <span class="logo-mafia">MÁFIA</span>
+            <span class="logo-30k"> 30K</span>
+          </span>
+        </a>
+
+        <!-- Menu Desktop -->
+        <div class="nav-menu" id="nav-menu">
+          <a href="index.html" class="nav-link">
+            <span class="nav-icon">🏠</span>
+            Quartel
+          </a>
+          <a href="rede.html" class="nav-link active">
+            <span class="nav-icon">👥</span>
+            Rede 30k
+          </a>
+          <a href="drinks.html" class="nav-link">
+            <span class="nav-icon">🍹</span>
+            Drinks
+          </a>
+          <a href="fusion.html" class="nav-link">
+            <span class="nav-icon">🍛</span>
+            Fusion
+          </a>
+          <a href="valores.html" class="nav-link">
+            <span class="nav-icon">💰</span>
+            Mercado
+          </a>
+          <a href="perfil.html" class="nav-link">
+            <span class="nav-icon">🛡️</span>
+            Perfil
+          </a>
+        </div>
+
+        <!-- Botão Mobile -->
+        <button class="nav-toggle" id="nav-toggle">
+          <i data-lucide="menu" class="nav-toggle-icon"></i>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Background Cyber -->
+    <div class="cyber-background">
+      <div class="cyber-grid"></div>
+      <div class="cyber-glow"></div>
+    </div>
+
+    <!-- Conteúdo Principal -->
+    <main class="main-content">
+      <!-- Header da Rede -->
+      <section class="rede-header">
+        <div class="container">
+          <h1 class="page-title">REDE SOCIAL 30K</h1>
+          <p class="page-subtitle">
+            Underground digital onde o valor se constrói, não se implora
+          </p>
+        </div>
+      </section>
+
+      <!-- Tabs de Navegação -->
+      <section class="tabs-section">
+        <div class="container">
+          <div class="tabs-container">
+            <button class="tab-btn active" data-tab="feed">
+              <span class="tab-icon">🌊</span>
+              Feed
+            </button>
+            <button class="tab-btn" data-tab="missions">
+              <span class="tab-icon">⚡</span>
+              Missões
+            </button>
+            <button class="tab-btn" data-tab="ranking">
+              <span class="tab-icon">👑</span>
+              Ranking
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Conteúdo das Tabs -->
+      <section class="content-section">
+        <div class="container">
+          <div class="content-grid">
+            <!-- Conteúdo Principal -->
+            <div class="main-content-area">
+              <!-- Tab Feed -->
+              <div class="tab-content active" id="feed-content">
+                <!-- Novo Post -->
+                <div class="new-post-card">
+                  <textarea
+                    class="new-post-input"
+                    placeholder="Mostre seu valor para a máfia..."
+                    rows="3"
+                  ></textarea>
+                  <div class="new-post-actions">
+                    <div class="post-options">
+                      <button class="post-option" title="Adicionar Foto">
+                        📷
+                      </button>
+                      <button class="post-option" title="Adicionar Áudio">
+                        🎵
+                      </button>
+                      <button class="post-option" title="Adicionar Vídeo">
+                        📹
+                      </button>
+                    </div>
+                    <button class="btn btn-post">POSTAR</button>
+                  </div>
+                </div>
+
+                <!-- Feed de Posts -->
+                <div class="posts-feed" id="posts-feed">
+                  <!-- Posts serão carregados via JavaScript -->
+                </div>
+              </div>
+
+              <!-- Tab Missões -->
+              <div class="tab-content" id="missions-content">
+                <h3 class="content-title">Missões Ativas da Máfia</h3>
+                <div class="missions-list" id="missions-list">
+                  <!-- Missões serão carregadas via JavaScript -->
+                </div>
+              </div>
+
+              <!-- Tab Ranking -->
+              <div class="tab-content" id="ranking-content">
+                <h3 class="content-title">Ranking da Máfia</h3>
+                <div class="ranking-list" id="ranking-list">
+                  <!-- Ranking será carregado via JavaScript -->
+                </div>
+              </div>
+            </div>
+
+            <!-- Sidebar -->
+            <div class="sidebar">
+              <!-- Stats do Usuário -->
+              <div class="sidebar-card">
+                <h4 class="sidebar-title">Seus Stats 30k</h4>
+                <div class="user-stats">
+                  <div class="xp-progress">
+                    <div class="xp-info">
+                      <span>XP até próximo nível</span>
+                      <span>750/1000</span>
+                    </div>
+                    <div class="progress-bar">
+                      <div class="progress-fill" style="width: 75%"></div>
+                    </div>
+                  </div>
+                  <div class="stats-grid">
+                    <div class="stat-item">
+                      <div class="stat-value">1.2k</div>
+                      <div class="stat-label">Reconhecimentos</div>
+                    </div>
+                    <div class="stat-item">
+                      <div class="stat-value">R$ 850</div>
+                      <div class="stat-label">Valor/hora</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Trending -->
+              <div class="sidebar-card">
+                <h4 class="sidebar-title">Trending 30k</h4>
+                <div class="trending-list">
+                  <div class="trending-item">
+                    <span class="trending-hash">#</span>
+                    <span class="trending-tag">CyberFavela</span>
+                  </div>
+                  <div class="trending-item">
+                    <span class="trending-hash">#</span>
+                    <span class="trending-tag">ValorHumano</span>
+                  </div>
+                  <div class="trending-item">
+                    <span class="trending-hash">#</span>
+                    <span class="trending-tag">Underground30k</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Scripts -->
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/rede.js"></script>
+  </body>
+</html>

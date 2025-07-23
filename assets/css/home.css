@@ -1,0 +1,381 @@
+/* ===================================
+   MÁFIA 30K - ESTILOS HOME PAGE
+   Página inicial com hero e serviços
+=================================== */
+
+/* Hero Section */
+.hero-section {
+  padding: var(--spacing-2xl) 0;
+  text-align: center;
+  position: relative;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+}
+
+.hero-content {
+  animation: fadeInUp 1s ease;
+}
+
+.hero-title {
+  font-size: clamp(3rem, 8vw, 6rem);
+  font-weight: 900;
+  line-height: 0.9;
+  margin-bottom: var(--spacing-lg);
+  text-shadow: 0 0 30px rgba(255, 0, 128, 0.5);
+}
+
+.title-gradient {
+  background: linear-gradient(
+    135deg,
+    var(--color-pink),
+    var(--color-green),
+    var(--color-yellow)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: neonGlow 3s ease-in-out infinite alternate;
+}
+
+.title-white {
+  color: var(--color-white);
+  text-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+}
+
+/* Frase de Impacto */
+.hero-quote {
+  margin: var(--spacing-xl) 0;
+  display: flex;
+  justify-content: center;
+  animation: fadeInUp 1s ease 0.3s both;
+}
+
+.quote-box {
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(10px);
+  padding: var(--spacing-lg) var(--spacing-xl);
+  border-radius: var(--border-radius-xl);
+  border: 1px solid rgba(255, 0, 128, 0.3);
+  position: relative;
+  animation: neonGlow 3s ease-in-out infinite alternate;
+}
+
+.quote-text {
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  font-weight: 700;
+  color: var(--color-green);
+  text-shadow: 0 0 20px rgba(57, 255, 20, 0.5);
+}
+
+/* Descrição */
+.hero-description {
+  font-size: clamp(1rem, 2.5vw, 1.5rem);
+  color: var(--color-gray-300);
+  max-width: 900px;
+  margin: 0 auto var(--spacing-xl);
+  line-height: 1.6;
+  animation: fadeInUp 1s ease 0.6s both;
+}
+
+/* Botões de Ação */
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-md);
+  justify-content: center;
+  align-items: center;
+  animation: fadeInUp 1s ease 0.9s both;
+}
+
+/* Seção do Ecossistema */
+.ecosystem-section {
+  padding: var(--spacing-2xl) 0;
+  position: relative;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--spacing-lg);
+  margin-top: var(--spacing-xl);
+}
+
+.service-card {
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--color-gray-700);
+  border-radius: var(--border-radius-xl);
+  padding: var(--spacing-xl);
+  transition: all var(--transition-normal);
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.service-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.1),
+    transparent
+  );
+  transition: var(--transition-slow);
+}
+
+.service-card:hover::before {
+  left: 100%;
+}
+
+.service-card:hover {
+  border-color: rgba(255, 0, 128, 0.5);
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: var(--shadow-card), 0 0 30px rgba(255, 0, 128, 0.3);
+}
+
+.service-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 4rem;
+  height: 4rem;
+  border-radius: var(--border-radius-lg);
+  margin-bottom: var(--spacing-md);
+  transition: var(--transition-normal);
+}
+
+.service-icon-pink {
+  background: linear-gradient(135deg, var(--color-pink), var(--color-purple));
+}
+
+.service-icon-green {
+  background: linear-gradient(135deg, var(--color-green), var(--color-cyan));
+}
+
+.service-icon-yellow {
+  background: linear-gradient(135deg, var(--color-yellow), #ff6b35);
+}
+
+.service-icon-purple {
+  background: linear-gradient(135deg, var(--color-purple), var(--color-pink));
+}
+
+.service-card:hover .service-icon {
+  transform: scale(1.1) rotate(5deg);
+  box-shadow: 0 0 20px rgba(255, 0, 128, 0.4);
+}
+
+.icon {
+  width: 2rem;
+  height: 2rem;
+  color: var(--color-white);
+}
+
+.service-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-white);
+  margin-bottom: var(--spacing-sm);
+  transition: var(--transition-normal);
+}
+
+.service-card:hover .service-title {
+  color: var(--color-pink);
+}
+
+.service-description {
+  color: var(--color-gray-400);
+  font-size: 1.125rem;
+  line-height: 1.6;
+  margin-bottom: var(--spacing-lg);
+}
+
+.service-link {
+  display: flex;
+  align-items: center;
+  color: var(--color-green);
+  font-weight: 700;
+  text-decoration: none;
+  transition: var(--transition-normal);
+}
+
+.service-arrow {
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-left: var(--spacing-xs);
+  transition: var(--transition-normal);
+}
+
+.service-card:hover .service-link {
+  transform: translateX(8px);
+}
+
+.service-card:hover .service-arrow {
+  transform: translateX(4px);
+}
+
+/* CTA Final */
+.cta-section {
+  padding: var(--spacing-2xl) 0;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 0, 128, 0.1),
+    rgba(139, 92, 246, 0.1)
+  );
+  position: relative;
+}
+
+.cta-content {
+  text-align: center;
+  animation: fadeInUp 1s ease;
+}
+
+.cta-title {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 900;
+  margin-bottom: var(--spacing-md);
+  background: linear-gradient(
+    135deg,
+    var(--color-green),
+    var(--color-yellow),
+    var(--color-pink)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 0 0 30px rgba(57, 255, 20, 0.5);
+}
+
+.cta-description {
+  font-size: 1.25rem;
+  color: var(--color-gray-300);
+  margin-bottom: var(--spacing-xl);
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Animações específicas da home */
+@keyframes heroGlow {
+  0%,
+  100% {
+    text-shadow: 0 0 30px rgba(255, 0, 128, 0.5);
+  }
+  50% {
+    text-shadow: 0 0 50px rgba(57, 255, 20, 0.7);
+  }
+}
+
+.hero-title {
+  animation: heroGlow 4s ease-in-out infinite;
+}
+
+/* Efeitos de hover nos cards */
+.service-card {
+  position: relative;
+}
+
+.service-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    135deg,
+    transparent,
+    rgba(255, 0, 128, 0.1),
+    transparent
+  );
+  opacity: 0;
+  transition: var(--transition-normal);
+  pointer-events: none;
+}
+
+.service-card:hover::after {
+  opacity: 1;
+}
+
+/* Responsividade específica da home */
+@media (max-width: 768px) {
+  .hero-section {
+    padding: var(--spacing-xl) 0;
+    min-height: 70vh;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .hero-actions .btn {
+    justify-content: center;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+  }
+
+  .service-card {
+    padding: var(--spacing-lg);
+  }
+
+  .quote-box {
+    padding: var(--spacing-md) var(--spacing-lg);
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-description {
+    font-size: 1rem;
+  }
+
+  .service-icon {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .icon {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+  .service-title {
+    font-size: 1.25rem;
+  }
+
+  .service-description {
+    font-size: 1rem;
+  }
+}
+
+/* Estados de interação */
+.service-card:active {
+  transform: translateY(-4px) scale(0.98);
+}
+
+.service-card:focus-within {
+  outline: 2px solid var(--color-pink);
+  outline-offset: 2px;
+}
+
+/* Acessibilidade */
+@media (prefers-reduced-motion: reduce) {
+  .hero-title,
+  .quote-box,
+  .service-card::before {
+    animation: none;
+  }
+
+  .service-card:hover {
+    transform: none;
+  }
+}
