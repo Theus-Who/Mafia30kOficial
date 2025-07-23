@@ -345,6 +345,10 @@
     margin-right: auto;
 }
 
+.cart-item-image {
+    width: 50%;
+}
+
 /* Responsividade */
 @media (max-width: 768px) {
     .drinks-grid {

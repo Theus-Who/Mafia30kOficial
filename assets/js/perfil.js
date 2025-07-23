@@ -9,8 +9,8 @@
 const perfilState = {
     currentTab: 'overview',
     userProfile: {
-        name: 'CyberRebel_30k',
-        value: 850,
+        name: 'Theus_Who30k',
+        value: 20,
         level: 'Respeitado',
         xp: 4250,
         maxXp: 5000,
@@ -82,23 +82,7 @@ function initializeTabs() {
 }
 
 /**
- * Inicializa edição de perfil
- */
-function initializeProfileEdit() {
-    const editBtn = document.querySelector('.edit-btn');
-    const avatarEdit = document.querySelector('.avatar-edit');
-    
-    if (editBtn) {
-        editBtn.addEventListener('click', function() {
-            showEditProfileModal();
-        });
-    }
-    
-    if (avatarEdit) {
-        avatarEdit.addEventListener('click', function() {
-            showAvatarEditModal();
-        });
-    }
+
     
     // Botões de ação rápida
     const quickActionBtns = document.querySelectorAll('.sidebar-btn');

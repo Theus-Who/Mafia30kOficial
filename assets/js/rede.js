@@ -1,7 +1,7 @@
 /**
  * ===================================
  * MÁFIA 30K - JAVASCRIPT REDE SOCIAL
- * Funcionalidades do feed, missões e ranking
+ * Funcionalidades do feed, missões 
  * ===================================
  */
 
@@ -454,30 +454,7 @@ function loadRankingData() {
 /**
  * Renderiza o ranking
  */
-function renderRanking(ranking) {
-    const rankingContainer = document.getElementById('ranking-list');
-    if (!rankingContainer) return;
-    
-    rankingContainer.innerHTML = '';
-    
-    ranking.forEach((user, index) => {
-        const userElement = document.createElement('div');
-        userElement.className = `ranking-item ${user.isCurrentUser ? 'current-user' : ''}`;
-        userElement.innerHTML = `
-            <div class="ranking-user">
-                <div class="ranking-avatar">${user.avatar}</div>
-                <div class="ranking-info">
-                    <span class="ranking-position">#${user.position}</span>
-                    <span class="ranking-name">${user.name}</span>
-                </div>
-            </div>
-            <div class="ranking-xp">${MafiaUtils.formatNumber(user.xp)} XP</div>
-        `;
-        
-        userElement.style.animationDelay = `${index * 0.1}s`;
-        rankingContainer.appendChild(userElement);
-    });
-}
+
 
 /**
  * Atualiza estatísticas do usuário
