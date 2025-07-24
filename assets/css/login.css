@@ -1,0 +1,283 @@
+    :root {
+            --dark-background: #121212; /* Mais escuro */
+            --dark-surface: #1e1e1e; /* Superfície mais escura e profunda */
+            --red-accent: #ff004c; /* Vermelho mais vibrante e digital */
+            --text-color: #e0e0e0;
+            --input-bg: rgba(255, 255, 255, 0.05); /* Fundo sutil para inputs */
+            --input-border: #444;
+            --input-focus-border: var(--red-accent);
+            --button-hover-glow: rgba(255, 0, 76, 0.7);
+            --transition-speed: 0.4s; /* Transições mais suaves */
+            --box-shadow-color: rgba(0, 0, 0, 0.7);
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Montserrat', sans-serif;
+            background: linear-gradient(135deg, var(--dark-background) 0%, #0a0a0a 100%); /* Gradiente sutil */
+            color: var(--text-color);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+          
+            position: relative;
+        }
+
+        /* Efeito de background abstrato sutil (opcional, para um toque mais "hacker") */
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at top left, rgba(255, 0, 76, 0.05) 0%, transparent 40%),
+                        radial-gradient(circle at bottom right, rgba(255, 0, 76, 0.05) 0%, transparent 40%);
+            z-index: -1;
+            opacity: 0.7;
+        }
+
+
+        .container {
+            background: var(--dark-surface);
+            border-radius: 20px; /* Bordas mais arredondadas */
+            box-shadow: 0 15px 40px var(--box-shadow-color), 0 0 60px rgba(255, 0, 76, 0.25); /* Sombra mais profunda e brilho acentuado */
+            padding: 50px; /* Mais padding para espaçamento interno */
+            width: 100%;
+            max-width: 500px; /* Largura máxima um pouco maior */
+            text-align: center;
+            position: relative;
+            overflow: auto;
+            border: 1px solid rgba(255, 0, 76, 0.3); /* Borda mais visível e elegante */
+            backdrop-filter: blur(10px); /* Efeito de vidro fosco no fundo do container */
+            -webkit-backdrop-filter: blur(10px);
+        }
+
+        .logo {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 3.2em; /* Logo maior */
+            color: var(--red-accent);
+            margin-bottom: 40px;
+            letter-spacing: 3px; /* Espaçamento maior entre letras */
+            text-shadow: 0 0 15px var(--red-accent, 0.7); /* Brilho mais intenso */
+            animation: pulse-logo 2s infinite alternate; /* Animação sutil de pulsação */
+        }
+
+        @keyframes pulse-logo {
+            from { transform: scale(1); opacity: 1; }
+            to { transform: scale(1.02); opacity: 0.95; }
+        }
+
+        .logo span {
+            color: var(--text-color);
+            font-weight: 700;
+        }
+
+        .form-container {
+            position: relative;
+            height: 400px; /* Aumenta a altura para conter os formulários e espaçamento */
+            
+        }
+
+        .form {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 20px 0;
+            transition: opacity var(--transition-speed) ease-in-out, transform var(--transition-speed) ease-in-out;
+            opacity: 0;
+            transform: translateX(100%);
+            z-index: 1;
+        }
+
+        .form.active {
+            opacity: 1;
+            transform: translateX(0);
+            z-index: 2;
+        }
+
+        .form.inactive-left {
+            transform: translateX(-100%);
+            opacity: 0;
+        }
+
+        .form.inactive-right {
+            transform: translateX(100%);
+            opacity: 0;
+        }
+
+        h2 {
+            font-family: 'Orbitron', sans-serif;
+            color: var(--text-color);
+            margin-bottom: 35px;
+            font-size: 2.2em; /* Títulos maiores */
+            text-shadow: 0 0 8px rgba(255, 0, 76, 0.4);
+        }
+
+        .input-group {
+            margin-bottom: 25px; /* Mais espaçamento entre campos */
+            position: relative;
+        }
+
+        .input-group input {
+            width: calc(100% - 40px); /* Ajuste para o padding e ícone */
+            padding: 18px 20px 18px 45px; /* Mais padding e espaço para o ícone */
+            background: var(--input-bg);
+            border: 1px solid var(--input-border);
+            border-radius: 10px; /* Bordas mais arredondadas */
+            color: var(--text-color);
+            font-size: 1.1em;
+            outline: none;
+            transition: border-color var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
+        }
+
+        .input-group input::placeholder {
+            color: rgba(224, 224, 224, 0.6);
+        }
+
+        .input-group input:focus {
+            border-color: var(--input-focus-border);
+            box-shadow: 0 0 12px rgba(255, 0, 76, 0.5); /* Brilho mais forte no foco */
+            background: rgba(255, 255, 255, 0.08); /* Fundo um pouco mais claro ao focar */
+        }
+
+        .input-group .icon {
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--red-accent); /* Ícones vermelhos */
+            font-size: 1.2em;
+        }
+
+        .btn {
+            margin-bottom: 50px;
+            background-color: var(--red-accent);
+            color: var(--text-color);
+            border: none;
+            padding: 18px 40px; /* Botões maiores */
+            border-radius: 10px;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.2em;
+            cursor: pointer;
+            transition: background-color var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+            box-shadow: 0 5px 15px rgba(255, 0, 76, 0.4); /* Sombra para o botão */
+        }
+
+        .btn:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, var(--button-hover-glow), transparent);
+            transition: left var(--transition-speed) ease-out; /* Transição mais suave para o brilho */
+            z-index: -1;
+        }
+
+        .btn:hover {
+            background-color: #ff3377; /* Cor um pouco mais clara no hover */
+            box-shadow: 0 0 25px var(--red-accent); /* Brilho mais intenso e espalhado */
+            transform: translateY(-2px); /* Efeito sutil de levantar */
+        }
+
+        .btn:hover:before {
+            left: 100%;
+        }
+
+        .toggle-form {
+            margin-top: 50px; /* Mais espaçamento */
+            color: rgba(224, 224, 224, 0.8);
+            font-size: 1em;
+        }
+
+        .toggle-form a {
+            color: var(--red-accent);
+            text-decoration: none;
+            font-weight: 600; /* Mais peso para o link */
+            transition: color var(--transition-speed) ease;
+        }
+
+        .toggle-form a:hover {
+            color: var(--input-focus-border);
+            text-decoration: underline;
+        }
+
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .container {
+                padding: 40px 30px;
+                margin: 20px;
+                max-width: 90%; /* Ocupa mais largura em telas menores */
+            }
+            .logo {
+                font-size: 2.8em;
+                margin-bottom: 30px;
+            }
+            h2 {
+                font-size: 1.8em;
+                margin-bottom: 30px;
+            }
+            .input-group input {
+                padding: 15px 20px 15px 40px; /* Ajusta padding do input */
+                font-size: 1em;
+            }
+            .input-group .icon {
+                font-size: 1.1em;
+                left: 12px;
+            }
+            .btn {
+                padding: 15px 30px;
+                font-size: 1.1em;
+            }
+            .form-container {
+                height: 380px; /* Ajusta altura do container de formulários */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 30px 20px;
+                margin: 15px;
+                border-radius: 15px;
+            }
+            .logo {
+                font-size: 2.4em;
+                letter-spacing: 2px;
+            }
+            h2 {
+                font-size: 1.6em;
+                margin-bottom: 25px;
+            }
+            .input-group {
+                margin-bottom: 20px;
+            }
+            .input-group input {
+                padding: 12px 15px 12px 35px; /* Mais ajuste */
+            }
+            .input-group .icon {
+                font-size: 1em;
+                left: 10px;
+            }
+            .btn {
+                padding: 12px 25px;
+                font-size: 1em;
+            }
+            .toggle-form {
+                margin-top: 25px;
+                font-size: 0.9em;
+            }
+            .form-container {
+                height: 360px; /* Mais ajuste para telas muito pequenas */
+            }
+        }
